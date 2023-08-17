@@ -1,7 +1,7 @@
 {
   "_manifest" : {
-    "name": "Syncler-Lite",
-    "id": "Syncler-Lite",
+    "name": "Syncler-Lite Express",
+    "id": "Syncler-Lite Express",
     "version": 6,
     "classPath": "",
     "permaUrl": "https://raw.githubusercontent.com/alpineboi20/test/main/test.json"
@@ -153,9 +153,9 @@
         "languages": [
             "en"
         ],
-        "base_url": "https://1337x.to",
+        "base_url": "https://1337x.unblockit.vegas",
         "fallback_urls": [
-            "https://1337x.unblockit.vegas"
+            "https://1337x.to"
         ],
         "response_type": "text",
         "movie": {
@@ -210,9 +210,9 @@
         "languages": [
             "en"
         ],
-        "base_url": "https://torlock.unblockit.vegas",
+        "base_url": "https://freeanimesonline.com/proxify.php?proxy=ZnJlZXByb3h5Lmlv&site=aHR0cDovL3RvcmxvY2suY29tLw==",
         "fallback_urls": [
-            "https://freeanimesonline.com/proxify.php?proxy=ZnJlZXByb3h5Lmlv&site=aHR0cDovL3RvcmxvY2suY29tLw=="
+            "https://torlock.unblockit.vegas"
         ],
         "response_type": "text",
         "movie": {
