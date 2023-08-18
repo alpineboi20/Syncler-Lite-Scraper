@@ -170,7 +170,7 @@
             "&": "",
             "\"": "",
             "*": ""
-		}	
+    }
     },
     "_1337x": {
         "name": "1337x",
@@ -235,7 +235,7 @@
         "languages": [
             "it"
         ],
-        "base_url": "https://ilcorsaronero.link",
+        "base_url": "http://ilcorsaronero.link",
         "fallback_urls": [
             "https://ilcorsaronero.unbl4you.lol"
         ],
@@ -265,7 +265,7 @@
                 "{title.original} {year} {seasonCode}",
                 "{title.it} {year} season",
                 "{title.original} {year} season"
-            ]
+             ]
         }
     }
 }
