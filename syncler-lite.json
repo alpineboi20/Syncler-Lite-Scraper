@@ -115,37 +115,62 @@
             "*": ""
         }
     },
-    "rutor": {
-        "name": "RuTor",
+    "torrentdownloads": {
+        "name": "TorrentDownloads",
         "enabled": true,
         "languages": [
-            "ru"
+            "en"
         ],
-        "base_url": "https://torproxy.org/?cdURL=http%3A%2F%2Frutor.is%2F",
-            "fallback_urls": [
-            "https://unblockweb.one/?cdURL=http%3A%2F%2Frutor.is%2F"
+        "base_url": "https://www.torrentdownloads.pro",
+        "fallback_urls": [
+            "https://torrentdownloads.unblockit.vegas"
         ],
         "response_type": "text",
+        "separator": "+",
         "movie": {
-            "query": "/search/{query}",
+            "query": "/search/?search={query}",
             "keywords": "{title} {year}"
         },
         "episode": {
-            "query": "/search/{query}",
+            "query": "/search/?search={query}",
             "keywords": [
                 "{title} {episodeCode}",
                 "{title} {year} {episodeCode}"
             ]
         },
-        "html_parser": {
-            "row": "doc.querySelectorAll('tbody tr')",
-            "title": "row.querySelector('td:nth-child(2)').innerText",
-            "peers": "row.querySelector('td:nth-last-child(1) span.green').innerText",
-            "seeds": "row.querySelector('td:nth-last-child(1) span.red').innerText",
-            "size": "row.querySelector('td:nth-last-child(2)').innerText",
-            "url": "row.querySelector('td:nth-child(2) a:nth-child(2)').getAttribute('href')"
+        "season": {
+            "query": "/search/?search={query}",
+            "keywords": [
+                "{title} {seasonCode}",
+                "{title} season",
+                "{title} {year} {seasonCode}",
+                "{title} {year} season"
+            ]
         },
-        "source_is_in_sub_page": false
+        "anime": {
+            "query": "/search/?search={query}",
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
+        },
+        "html_parser": {
+            "row": "doc.querySelectorAll('.inner_container')[1].querySelectorAll('.grey_bar3')",
+            "title": "row.querySelector('p a').textContent",
+            "peers": "row.querySelector('span:nth-child(3)').textContent",
+            "seeds": "row.querySelector('span:nth-child(4)').textContent",
+            "size": "row.querySelector('span:nth-child(5)').textContent",
+            "url": "row.querySelector('p a').getAttribute('href').match('http') || row.querySelector('p a').getAttribute('href').match('php') ? null : row.querySelector('p a').getAttribute('href')"
+        },
+        "source_is_in_sub_page": true,
+        "title_replacement": {
+            ".": "",
+            ":": "",
+            "'": "",
+            "&": "",
+            "\"": "",
+            "*": ""
+		}	
     },
     "_1337x": {
         "name": "1337x",
