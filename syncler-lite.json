@@ -123,7 +123,7 @@
         ],
         "base_url": "https://1337x.unblockit.vegas",
         "fallback_urls": [
-            "https://1337x.unblockit.vegas"
+            "https://www.1337x.tw"
         ],
         "response_type": "text",
         "movie": {
