@@ -229,43 +229,58 @@
             "*": ""
         }
     },
-    "ilcorsaronero": {
-        "name": "IlCorsaroNero",
+    "bitsearch": {
+        "name": "BitSearch",
         "enabled": true,
         "languages": [
-            "it"
+            "en"
         ],
-        "base_url": "http://ilcorsaronero.link",
-        "fallback_urls": [
-            "https://ilcorsaronero.unbl4you.lol"
-        ],
+        "base_url": "https://bitsearch.to",
         "response_type": "text",
         "separator": "+",
         "movie": {
-            "query": "/argh.php?search={query}",
+            "query": "/search?q={query}&sort=seeders",
             "keywords": "{title} {year}"
         },
         "episode": {
-            "query": "/argh.php?search={query}",
+            "query": "/search?q={query}&sort=seeders",
             "keywords": [
-                "{title.it} {episodeCode}",
-                "{title.original} {episodeCode}",
-                "{title.it} {year} {episodeCode}",
-                "{title.original} {year} {episodeCode}"
+                "{title} {episodeCode}",
+                "{title} {year} {episodeCode}"
             ]
         },
         "season": {
-            "query": "/argh.php?search={query}",
+            "query": "/search?q={query}&sort=seeders",
             "keywords": [
-                "{title.it} {seasonCode}",
-                "{title.original} {seasonCode}",
-                "{title.it} season",
-                "{title.original} season",
-                "{title.it} {year} {seasonCode}",
-                "{title.original} {year} {seasonCode}",
-                "{title.it} {year} season",
-                "{title.original} {year} season"
-             ]
+                "{title} {seasonCode}",
+                "{title} season",
+                "{title} {year} {seasonCode}",
+                "{title} {year} season"
+            ]
+        },
+        "anime": {
+            "query": "/search?q={query}&sort=seeders",
+            "keywords": [
+                "{title} {absoluteNumber}",
+                "{title} {episode}"
+            ]
+        },
+        "html_parser": {
+            "row": "doc.querySelectorAll('.search-result')",
+            "title": "row.querySelector('.title a').textContent",
+            "peers": "row.querySelector('.stats div:nth-child(4)').textContent.trim().replace('.','').replace('K','00')",
+            "seeds": "row.querySelector('.stats div:nth-child(3)').textContent.trim().replace('.','').replace('K','00')",
+            "size": "row.querySelector('.stats div:nth-child(2)').textContent",
+            "url": "row.querySelector('.dl-magnet').getAttribute('href')"
+        },
+        "source_is_in_sub_page": false,
+        "title_replacement": {
+            ".": "",
+            ":": "",
+            "'": "",
+            "&": "",
+            "\"": "",
+            "*": ""
         }
     }
 }
