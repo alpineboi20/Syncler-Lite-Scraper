@@ -58,31 +58,31 @@
             "*": ""
         }
     },
-    "torrentgalaxy": {
-        "name": "TorrentGalaxy",
+    "torrentdownload": {
+        "name": "TorrentDownload",
         "enabled": true,
         "languages": [
             "en"
         ],
-        "base_url": "https://tgx.sb",
-       "fallback_urls": [
-            "https://freeanimesonline.com/o.php?b=21&f=norefer&pv=0&mobile=&u=https://torrentgalaxy.to"
+        "base_url": "https://www.torrentdownload.info",
+        "fallback_urls": [
+            "https://torrentdownload.unblockit.vegas"
         ],
         "response_type": "text",
         "separator": "+",
         "movie": {
-            "query": "/torrents.php?search={query}",
+            "query": "/search?q={query}",
             "keywords": "{title} {year}"
         },
         "episode": {
-            "query": "/torrents.php?search={query}",
+            "query": "/search?q={query}",
             "keywords": [
                 "{title} {episodeCode}",
                 "{title} {year} {episodeCode}"
             ]
         },
         "season": {
-            "query": "/torrents.php?search={query}",
+            "query": "/search?q={query}",
             "keywords": [
                 "{title} {seasonCode}",
                 "{title} season",
@@ -91,21 +91,21 @@
             ]
         },
         "anime": {
-            "query": "/torrents.php?search={query}",
+            "query": "/search?q={query}",
             "keywords": [
                 "{title} {absoluteNumber}",
                 "{title} {episode}"
             ]
         },
         "html_parser": {
-            "row": "doc.querySelectorAll('.tgxtable .tgxtablerow')",
-            "title": "row.querySelector('.tgxtablecell:nth-child(4) a:nth-child(1)').getAttribute('title')",
-            "peers": "row.querySelector('.tgxtablecell:nth-child(11) span font:nth-child(2)').textContent",
-            "seeds": "row.querySelector('.tgxtablecell:nth-child(11) span font:nth-child(1)').textContent",
-            "size": "row.querySelector('.tgxtablecell:nth-child(8)').textContent",
-            "url": "row.querySelector('.tgxtablecell:nth-child(5) a:nth-child(2)').getAttribute('href')"
+            "row": "doc.querySelectorAll('table:nth-of-type(2) tbody tr:not(:first-child)')",
+            "title": "row.querySelector('.tt-name a').textContent",
+            "peers": "row.querySelector('.tdleech').textContent.replace(',','')",
+            "seeds": "row.querySelector('.tdseed').textContent.replace(',','')",
+            "size": "row.querySelector('.tdnormal:nth-of-type(3)').textContent",
+            "url": "row.querySelector('.tt-name a').getAttribute('href')"
         },
-        "source_is_in_sub_page": false,
+        "source_is_in_sub_page": true,
         "title_replacement": {
             ".": "",
             ":": "",
@@ -170,9 +170,9 @@
             "&": "",
             "\"": "",
             "*": ""
-    }
-    },
-    "_1337x": {
+        }
+       },
+        "_1337x": {
         "name": "1337x",
         "enabled": true,
         "languages": [
