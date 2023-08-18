@@ -64,9 +64,9 @@
         "languages": [
             "en"
         ],
-        "base_url": "https://sitenable.co/o.php?b=21&f=norefer&pv=0&mobile=&u=https://torrentgalaxy.to",
+        "base_url": "https://tgx.sb",
        "fallback_urls": [
-            "https://tgx.sb"
+            "https://freeanimesonline.com/o.php?b=21&f=norefer&pv=0&mobile=&u=https://torrentgalaxy.to"
         ],
         "response_type": "text",
         "separator": "+",
@@ -153,9 +153,9 @@
         "languages": [
             "en"
         ],
-        "base_url": "https://1337x.unblockit.vegas",
+        "base_url": "https://www.1337xx.to",
         "fallback_urls": [
-            "https://1337x.to"
+            "https://1337x.unblockit.vegas"
         ],
         "response_type": "text",
         "movie": {
@@ -210,9 +210,9 @@
         "languages": [
             "en"
         ],
-        "base_url": "https://freeanimesonline.com/proxify.php?proxy=ZnJlZXByb3h5Lmlv&site=aHR0cDovL3RvcmxvY2suY29tLw==",
+        "base_url": "https://torlock.unblockit.vegas",
         "fallback_urls": [
-            "https://torlock.unblockit.vegas"
+            "https://torlock.nocensor.cloud"
         ],
         "response_type": "text",
         "movie": {
