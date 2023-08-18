@@ -121,9 +121,9 @@
         "languages": [
             "en"
         ],
-        "base_url": "https://www.torrentdownloads.pro",
+       "base_url": "https://torrentdownloads.unblockit.vegas",
         "fallback_urls": [
-            "https://torrentdownloads.unblockit.vegas"
+            "https://www.torrentdownloads.pro"
         ],
         "response_type": "text",
         "separator": "+",
